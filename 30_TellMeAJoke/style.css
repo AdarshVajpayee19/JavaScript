@@ -1,0 +1,12 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+#joke{
+    background: rgb(216, 214, 214);
+    color: rgb(113, 19, 101);
+    text-align: center;
+    padding: 10px  0px 10px 0px;
+    font-family: cursive;
+}

@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.bulbcontainer{
+    height: 341px;
+    width: 341px;
+}
+
+.bulb{
+    background:rgb(213, 213, 127);
+}
