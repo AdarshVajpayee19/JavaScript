@@ -323,3 +323,5 @@ let myjokes = [
 
 let index = Math.floor(Math.random()*myjokes.length-1)
 joke.innerHTML = myjokes[index].joke
+
+
