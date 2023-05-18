@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+</head>
+<body>
+    <h1>Cookies</h1>
+    <hr>
+    <p>
+        <h3>Important Points about cookies.</h3>
+        <br>
+        <ul>
+            cookies are small strings of data stored  directly in browser.
+            In JavaScript, document.cookie provide access to cookie.
+        </ul>
+        <hr>
+        <ul>
+            cookies are set by webServer using the set-cookie HTTP-Header. Next time when the request is sent to the same domain,
+            <br>
+            The browser sends the cookie Http-header.That way the server knows who sent the request.
+            
+            we can also access cookies using document.cookie property
+            <hr>
+            alert(document.cookie) --> contains key = value pairs delimited by a;
+            <br>
+            <h3>Writing to cookie </h3>
+            An assignment to document.cookie is treated specially in a way that a write operation doesnt touch other cookies.
+            <hr>
+            document.cookie = "user=Adarsh" 
+            it updates only cookie named user to adarsh.
+            <h3>Cookie Options</h3>
+            Cookie have several options which can be provided after key = value to a set call like this :
+            <br>
+            document.cookie = "user = blr;path=/a;expires = Tue,29 March 2024 03:18:22 GMT"
+            <br>
+            path options makes the cookie visible at /a ,/a/b etc...
+            Expires sets Cookie expiration time.
+
+            <h2>NOTE</h2>
+            <hr>
+            <ol>
+                <li>The name = value pair,after encodeURIComponent,Should not exceed 4KB.</li>
+                <li>Total no of cookies per domain is limited to around 20+ (Exact number is browser dependent).</li>
+            </ol>
+        </ul>
+     </p>
+    <script src="scrip.js"></script>
+</body>
+</html>
+
