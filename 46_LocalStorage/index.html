@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <h2>Local Storage</h2>
+    <p>Local Storage is a web server object which are not sent to server with each request.</p>
+    <p>This data survives a full page refresh and even a full browser restart.</p>
+    <p>If you want to see local Storage in chrome then you go to web page inspect --> Application --> LocalStorage.</p>
+    <br>
+    <b>This are the methods provided by localStorage</b>
+    <ol>
+        <li><b>setItem(key,value) : </b>localStorage.setItem("name","Adarsh")<br>Store Key or Value pair.</li>
+        <li><b>getItem(key) : </b>localStorage.getItem("name")<br>Get the value by key.</li>
+        <li><b>removeItem(key) : </b>localStorage.removeItem("name")<br>remove the key with its value.</li>
+        <li><b>clear() : </b>localStorage.clear()<br>Delete Everything.</li>
+        <li><b>key(index) : </b>localStorage.key(index)<br>get key on a given position.</li>
+        <li><b>length : </b>localStorage.length()<br>The number of stored items.</li>
+        we can get and set values like an object.
+        <p>localStorage.one = 1<br>alert(localStorage.one)<br>delete  localStorage.one</p>
+        <h3>Important Note :</h3>
+        <ol>
+            <li>Both key and values must be strings.</li>
+            <li>We can use the two JSON methods to store objects in localStorage.</li>
+            <ul>
+                <li>JSON.Stringify(object)  --> converts objects to JSON Strings.</li>
+                <li>JSON.parse(string)  --> converts strings to objects.(must be a valid JSON).</li>
+            </ul>
+        </ol>
+    </ol>
+    <h2>Session Storage</h2>
+    Session Storage acts in a similar way to localStorage. The Only difference here is that while data stored in local storage has an expiration date,<br>
+    the data stored in Session storage will expire as soon as the page's session ends, that's it, When the page is closed.
+    <br>
+    Used less often than localStorage.Properties and methods are same as LocalStorage but:
+    <ol>
+        <li>The sessionstorage exists only within the current browser tab Another tab with same page will have a different storage.</li>
+        <li>The data survives page refresh, but not closing/opening the tab.</li>
+    </ol>
+    
+    <br>
+    <ol>
+        <li><b>setItem(key,value) : </b>sessionStorage.setItem("name","Adarsh")<br>Store Key or Value pair.</li>
+        <li><b>getItem(key) : </b>sessionStorage.getItem("name")<br>Get the value by key.</li>
+        <li><b>removeItem(key) : </b>sessionStorage.removeItem("name")<br>remove the key with its value.</li>
+        <li><b>clear() : </b>sessionStorage.clear()<br>Delete Everything.</li>
+        <li><b>key(index) : </b>sessionStorage.key(index)<br>get key on a given position.</li>
+    </ol>
+    
+    <h2>Storage Event</h2>
+    When the data gets updated in localStorage or sessionstorage, Storage event triggers with these Properties: 
+    <br>
+    <ol>
+        <li>Key --> The key</li>
+        <li>Old value --> Previous Value</li>
+        <li>New value --> New Value</li>
+        <li>Url --> Page URL</li>
+        <li>Storage Area --> Local or sessionstorage</li>
+    </ol>
+    We can listen the onstorage event of window which is triggered when updates are made to the same storage from other documents.
+   
+    window.onstorage=(e)=>{
+        alert("changed")
+        console.log(e)
+    }
+     
+    Open Two pages of same web page.
+    
+    <script src="script.js"></script>
+</body>
+</html>
