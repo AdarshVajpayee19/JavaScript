@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Inheritance.</title>
+</head>
+<body>
+    <h3>Prototype Inheritance</h3>
+    <hr>
+    <p>JavaScript objects have special property called prototype that is either null or references another object.
+    </p><br>
+    <center>Prototype object </center>
+    <center>^</center>
+    <center>|</center>
+    <center>|</center>        
+    <center>Object </center>
+
+    <p>When we try to read a property from a prototype and its missing,JavaScript automatically takes it from the prototype.This is Called as<b> "Prototype Inheritance."</b></p>
+    <h3>setting Prototype</h3>
+    <hr>
+    <p>We can Set Prototype by setting __proto__ Now if we read property from the object which is not in object and is present in the prototype,JavaScript will take it from prototype.</p>
+    <br>
+    <p>If we have a method in object, it is called from the object.If its missing in object and present in prototype, its is called from prototype.</p>    
+    <script src="script.js"></script>
+</body>
+</html>

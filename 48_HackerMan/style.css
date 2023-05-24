@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.8;
+    color: rgb(21, 221, 21);
+    background-image: url("Hacker.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#text{
+    margin-top: 20px;
+}
