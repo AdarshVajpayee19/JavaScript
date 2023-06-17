@@ -32,7 +32,7 @@ const showHack = async (message)=>{
     text.innerHTML = "<center>"+text.innerHTML + message + "<br></center><br>";
 }
 
-// iiFE --> Immediately Invoked Function Expression.
+// IIFE --> Immediately Invoked Function Expression.
 
 (async()=>{
     for(let i=0;i<a.length;i++)
