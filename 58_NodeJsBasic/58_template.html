@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <mate charest="utf-8" />
+    <title>Hello world!</title>
+  </head>
+  <body>
+    <center>
+      <h1 style="color:blue">User List</h1> 
+      <table style="border:2px solid black">
+        <tr style="border:2px solid black">
+          <th style="border:2px solid black">Name</th>
+          <th style="border:2px solid black">Age</th>
+        </tr>
+        {{#each users}}
+        <tr style="border:2px solid black">
+          <td style="border:2px solid black">{{this.name}}</td>
+          <td style="border:2px solid black">{{this.age}}</td>
+        </tr>
+        {{/each}}
+      </table>
+    </center>
+  </body>
+</html>
